@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://neet.ntaonline.in/frontend/web/admitcard/index -->
+<html lang="en-US" class="h-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://neet.ntaonline.in/frontend/web/images/nta-logo.png">
+        <title></title>
+    <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="K4ZEdSRFFIZUDj4jQgmEDXWs2-3fyruzqgh-cKKf61pCwH0PcHR11RFbaXoQasx1JMOQvaqVw8XJRjIfwNCkIg==">
+
+<link href="./index_files/simple-loading.css" rel="stylesheet">
+<link href="./index_files/bootstrap.css" rel="stylesheet">
+<link href="./index_files/demo.css" rel="stylesheet">
+<link href="./index_files/smart_wizard_all.css" rel="stylesheet">
+<link href="./index_files/bootstrap.min.css" rel="stylesheet">
+<link href="./index_files/bootstrap-grid.min.css" rel="stylesheet">
+<link href="./index_files/bootstrap-reboot.min.css" rel="stylesheet">
+<link href="./index_files/bootstrap-utilities.min.css" rel="stylesheet">
+<link href="./index_files/remixicon.css" rel="stylesheet">
+<link href="./index_files/style.min.css" rel="stylesheet">
+<link href="./index_files/responsive.css" rel="stylesheet">
+<link href="./index_files/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="./index_files/responsive.bootstrap4.min.css" rel="stylesheet">
+<link href="./index_files/buttons.bootstrap4.min.css" rel="stylesheet">
+<link href="./index_files/comman.css" rel="stylesheet">
+<link href="./index_files/jquery.multiselect.css" rel="stylesheet">
+<link href="./index_files/sweetalert.min.css" rel="stylesheet">    <style>
+        .loader {
+            background: rgb(255 255 255 / 80%) url(/frontend/web/loader2.gif);
+            background-position: center;
+            background-size: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .activeR {
+            color: green !important;
+            font-weight: bold;
+        }
+
+
+
+        #mynavbar .navbar-nav .nav-link {
+            font-size: 15px;
+            color: rgb(255 255 255);
+            padding-right: 0.9rem;
+            padding-left: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-link1 {
+            font-weight: 400;
+            letter-spacing: -.1px;
+            height: 40px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            white-space: nowrap;
+            margin-top: 2px;
+            color: #262626;
+            border-bottom: dotted 1px #a1b1cb;
+        }
+
+        .nav-link1 svg {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            stroke-width: 1.5px
+        }
+
+        .nav-link1:hover,
+        .nav-link1:focus {
+            background-color: rgb(235 138 43);
+            color: #ffffff;
+        }
+
+        .nav-link1 span {
+            transition: all .3s
+        }
+
+        .ugc-board {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header-main {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .footer {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .skin-dark .sub-link1 {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+        }
+
+        .ri-user-line,
+        .ri-phone-line,
+        .ri-bank-card-line,
+        .ri-award-line,
+        .ri-medal-2-line,
+        .ri-gallery-upload-line,
+        .ri-checkbox-circle-line {
+            margin-right: 4px !important;
+        }
+
+        .col-form-label {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px !important;
+        }
+
+        .card {
+            background-color: #fbfcfd;
+            border: none;
+        }
+
+        .navbar-nav {
+            margin-left: -10px;
+        }
+
+        .blink_me {
+            animation: blinker 4s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* label{font-weight:bold} */
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+    </style>
+    <link href="./index_files/font-awesome.min.css" rel="stylesheet">
+    <script src="./index_files/jquery.min.js.download"></script>
+<style>.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row;padding:0}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;padding:0;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em;padding:0}.swal2-popup.swal2-toast .swal2-styled{margin:.125em .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(100,150,200,.5)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:5px;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center;padding:0 1.8em}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0;padding:0 1.6em}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#2778c4;color:#fff;font-size:1.0625em}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#d14529;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#757575;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0 1.6em;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto}.swal2-validation-message{align-items:center;justify-content:center;margin:0 -2.7em;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}</style></head>
+
+<body class="skin-dark animate">
+    <div class="loader" style="display:none;"></div>
+                    <div class="registration-main">
+            <div class="header-main navbar navbar-expand-md navbar-light bg-light row">
+                <div class="col-sm-4"> <a href="https://www.education.gov.in/" target="_blank"><img class="dept-higher-edu-logo img-fluid" src="./index_files/left.jpg" alt=""></a> </div>
+                 <div class="col-sm-4 text-center custom-text-logo"> राष्ट्रीय पात्रता सह प्रवेश परीक्षा (स्नातक) - 2024 <br> NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) - 2024 </div>
+                <div class="col-sm-4 text-end"> <a href="https://www.nta.ac.in/" target="_blank"><img class="nta-logo img-fluid" src="./index_files/nta-logo-new.png" alt=""></a> </div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm navbar-dark topnavigation">
+                <div class="container-fluid">
+                    <a class="navbar-brand test-for" href="javascript:void(0)">NEET (UG) – 2024</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"> <span class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"> <a class="nav-link " href="https://neet.ntaonline.in/frontend/web/site/login"><i class="ri-home-8-line"></i> Home</a> </li>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle nav-link" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    Information Bulletin
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="https://exams.nta.ac.in/NEET/images/neet-ug-2024-draft-ib-09022024.pdf" target="_blank">Information Bulletin (Hindi)</a></li>
+                                    <li><a class="dropdown-item" href="https://exams.nta.ac.in/NEET/images/neet-ug-2024-draft-ib-09022024.pdf" target="_blank">Information Bulletin (English)</a></li>
+                                </ul>
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link userActivityBtn" href="https://neet.ntaonline.in/frontend/web/contactus/index"><i class="ri-question-answer-line"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="content-body">
+            
+
+
+
+    
+    <title>Admit Card</title>
+    <style>
+    .paragrap-alightment {
+        margin-left: 20px;
+        margin-top: -30px;
+    }
+    .left-side {
+        margin-left: 20px;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000;
+    }
+    .logo {
+        float: left;
+        margin-right: 10px;
+    }
+    .logo_name {
+        float: left;
+        margin-top: 13px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    table tr td {
+        padding: 2px 2px 2px 10px;
+    }
+    table tr td,
+    table tr th {
+        border: 1px solid #000;
+    }
+    .dsignature {
+        max-width: 150px;
+    }
+    #self-declaration-tbl p {
+        font-size: 11px;
+        margin: 0px;
+    }
+    #bottonTbl tr td {
+        border: 0px solid #ffffff !important;
+    }
+    span#imp-point p {
+        margin-bottom: 8px;
+        font-size: 13px;
+    line-height: 20px;
+    }
+    /* .header-admit-logo {
+        display: none;
+    } */
+    /* .header-admit-logo1 {
+        display: none;
+    } */
+    #self-section p {
+        margin-bottom: 0px;
+    }
+    /* this css work on page break to nest page */
+    .custom-table {
+        display:none;
+    }
+    .header-logo-display {
+                    display: none;
+                }
+    @media print {
+
+        .header-logo-display {
+                    display: block;
+                }
+
+        @page {
+            margin: auto; 
+            padding:auto;
+/*            size:Auto;*/
+        }
+        table {
+            page-break-inside: auto;
+        }
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto
+        }
+        .remove-print,
+        .userActivityBtn,
+        a.nav-link {
+            display: none;
+        }
+        .paragrap-alightment{line-height: 16px;}
+        .navbar-brand.test-for {
+            visibility: hidden;
+        }
+        .removeMargin {
+            margin: 0px;
+        }
+        .custom-table {width:100%;display:block;}
+        .content-body .container-fluid {
+            margin-top: -22px;
+        }
+        .content-body .container-fluid .add-width {
+            /* max-width: 100px; */
+        }
+        .dsignature {
+            max-width: 80px !important;
+            max-height: 45px !important;
+        }
+        #self-section p {
+            font-size: 12px !important;
+            margin-bottom: 0px !important;
+        }
+        #self-declaration-tbl p {
+            margin-bottom: 0px !important;
+            line-height:15px;
+        }
+        #self-declaration-tbl p .test-para {
+            font-size: 10px;
+            margin: 0px;
+        }
+        #imp-point p,
+        #imp-point ul li,
+        #imp-point ul {
+            font-size: 12px !important;
+            margin-bottom: 0px !important;
+        }
+        .paragrap-alightment {
+            margin-left: 20px !important;
+            margin-top: -22px !important;
+        }
+        .left-side {
+            margin-left: 20px !important;
+        }
+        span#imp-point p {
+            font-size: 14px;
+            line-height:17px;
+            text-align: justify;
+        }
+        ol#imp-point {
+          line-height: 13px;
+         font-size: 12px;
+        }
+    
+    .custom-header-para {
+        font-size: 12px;
+    }
+    .center-logo-print{
+        width:200px;
+        height:60px;
+    }
+    .Photo{
+        /* max-width:80px; */
+        max-height:120px;
+    }
+    #advisory{
+        font-size:10px;
+        
+    }
+    span#advisory p {
+        margin-bottom: 2px;
+        line-height:15px;
+    }
+    span#advisory ol{
+            margin-bottom: 5px;
+            line-height: 18px;
+    }
+    .footer-section tr td{
+        font-size:10px;
+    }
+    .add-width-bar{
+        width:120px;
+    }
+    .header-main {
+        display:none;
+    }
+    .gov, .aisss {
+        width:120px;
+        height:85px;
+    }
+    .content-body {
+    width: 100%;
+    margin-top: 15px!important;
+}
+/*            .para-print {
+                line-height: 13px;
+                font-size: 10px;
+            }*/
+            table tr td {
+                padding: 2px 2px 2px 10px;
+                border: 1px solid;
+            }
+            .footer, .header-main,.topnavigation,.heading-top { display: none }
+            #printPageButton { display: none; }
+            body {
+                font-size:12px;
+                display:flex;
+                table-layout:fixed;
+                padding-top:0;
+                padding-bottom:0;
+                height:auto;
+                padding-left:0;
+                padding-right:0;
+            }
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            marquee{display: none;}
+            .content-body{padding:0px!important;}
+            /*.footerhindi{margin-top:20em!important;}
+            .footerhindilast{margin-top:10em!important;}*/
+    span#imp-point p {
+        margin-bottom: 8px;
+        font-size: 10px;
+    /* line-height: 18px; */
+    }
+    span#imp-point ol li {
+    line-height: 15px;
+    font-size: 9px;
+    margin-bottom: 0;
+        }
+        .signpre{width:120px!important;}
+        .photopre{width:120px!important;}
+        .LeftImageWidth{
+            width: 200px;
+        }
+        table .table-box{
+            font-size: 10px;
+        }
+        .main-tbl tr td{
+        font-size:10px
+    }
+
+    
+   
+    }
+    table .table-box{
+        font-size: 12px;
+    }
+    .main-tbl tr td{
+        font-size:12px
+    }
+    .header-admit-logo-display {
+                    display: none;
+                }
+                
+    
+ 
+    /* .declaration-form p, .declaration-form ol li{
+        font-size: 14px !important;
+    } */
+    </style>
+
+
+
+    <div class="container-fluid">
+        <br>
+        <div class="navbar navbar-expand-md navbar-light bg-light row ">
+        <table width="100%" border="0" class="custom-table header-logo-display">
+            <tbody><tr>
+                <td width="25%">
+                <a href="https://neet.ntaonline.in/frontend/web/admitcard/index#">
+                    <img class="dept-higher-edu-logo img-fluid" src="./index_files/dept-higher-edu.png" width="180" height="60">
+                </a>
+                </td>
+                <td width="50%">
+            <p class="text-center">
+              </p><h2 style="text-align: center;font-size: 13px;font-weight: 700;">National Eligibility cum Entrance Test </h2>
+             <h2 style="text-align: center;font-size: 13px;font-weight: 700;">NEET (UG) - 2024</h2>
+        <p></p>
+                </td>
+                <td width="25%">
+                  <img class="ugc-logo LeftImageWidth aisss" src="./index_files/nmc-with-nta.jpg" width="300" height="80">  
+            
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+        <div class="col-sm-12 text-center">
+                <p class="custom-header-para" style="padding-top:10px;font-size:15px;">
+                    <button style="float: right; margin: 7px;" class="remove-print no-print btn btn-sm btn-success pull-right" id="print-btn" title="Click to Print">Print</button>
+                    <button onclick="window.print()" style="display:none" class="remove-print no-print btn btn-sm btn-success pull-right removeMargin" id="print-btn-show">Print</button>
+                </p>
+            </div>
+        <p class="text-center heading-top" style="margin-bottom: 0px;">
+        <b>National Eligibility cum Entrance Test </b>
+        </p><h2 class="heading-top" style="text-align: center;font-size: 14px;font-weight: 700;">NEET (UG) - 2024</h2>
+        <p></p>
+        <table width="100%" border="1" cellspacing="0" cellpadding="4" style="border-collapse: collapse; border-color: #000;margin-top:1px;" class="main-tbl">
+            <tbody><tr>
+                <td align="left" scope="row" width="24%"><b>Roll Number:</b></td>
+                <td width="18%"> 3119020185</td>
+                <td width="18%"><b>Application Number:</b></td>
+                <td width="20%">  240411383831 </td>
+                <td rowspan="7" align="center" valign="center" width="24%" class="photopreview" id="photocode">
+                <span id="CandidatePhotoExist" style="display:none">false</span><img class="signpre" src="./index_files/D0001_1709031982.jpg" alt="Candidate Photo" title="Photograph" style="width: 120px;height: 140px;">                </td>
+            </tr>
+            <tr>
+                <td align="left" scope="row"><b>Candidate's Name: </b></td>
+                <td>
+                SHRADDHA BHALCHANDRA MAGDUM                </td>
+                <td><b>Father's Name :</b></td>
+                <td> BHALCHANDRA</td>
+            </tr>
+            <tr>
+                <td align="left" scope="row"><b>Gender:</b></td>
+                <td>
+                    FEMALE                </td>
+                <td align="left" scope="row"><b>Date of Birth:</b></td>
+                <td>
+                   
+                14-04-2006                </td>
+                
+            </tr>
+            <tr>
+            <td align="left" scope="row"><b>Category:</b></td>
+                <td>
+                OBC-(NCL) AS PER CENTRAL LIST                </td>
+                <td align="left" scope="row"><b>State of Eligibility:</b></td>
+                <td>
+                 MAHARASHTRA 
+                
+                </td>
+            </tr>
+            <tr>
+                <td align="left" scope="row"><b>Person with Disability (PwD)*:</b></td>
+
+                <td>
+                NO                
+                     
+                </td>
+
+                <td align="left" scope="row"><b>Scribe required*:</b></td>
+                <td>
+                NA                
+                </td>
+            </tr>
+            <tr>
+                <td align="left" scope="row"><b>Type of Disability:</b></td>
+                <td colspan="3">
+                
+                NA                </td>
+            </tr>
+            
+
+            <tr>
+                <td colspan="2" class="text-center">
+                <!-- <p style="text-align:center;margin-bottom:-5px;">Roll Number Barcode</p> -->
+                 <span id="barcode"> 
+                        <svg id="w0" width="200px" height="82px" x="0px" y="0px" viewBox="0 0 200 82" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0,0)"><rect x="0" y="0" width="200" height="82" style="fill:#ffffff;"></rect><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="40"></rect><rect x="6" y="0" width="2" height="40"></rect><rect x="12" y="0" width="6" height="40"></rect><rect x="22" y="0" width="4" height="40"></rect><rect x="28" y="0" width="4" height="40"></rect><rect x="38" y="0" width="4" height="40"></rect><rect x="44" y="0" width="4" height="40"></rect><rect x="52" y="0" width="2" height="40"></rect><rect x="56" y="0" width="6" height="40"></rect><rect x="66" y="0" width="4" height="40"></rect><rect x="74" y="0" width="4" height="40"></rect><rect x="82" y="0" width="4" height="40"></rect><rect x="88" y="0" width="4" height="40"></rect><rect x="96" y="0" width="4" height="40"></rect><rect x="102" y="0" width="4" height="40"></rect><rect x="110" y="0" width="2" height="40"></rect><rect x="116" y="0" width="8" height="40"></rect><rect x="128" y="0" width="2" height="40"></rect><rect x="132" y="0" width="2" height="40"></rect><rect x="140" y="0" width="2" height="40"></rect><rect x="144" y="0" width="8" height="40"></rect><rect x="154" y="0" width="4" height="40"></rect><rect x="164" y="0" width="6" height="40"></rect><rect x="172" y="0" width="2" height="40"></rect><rect x="176" y="0" width="4" height="40"></rect><text style="font: 20px monospace" text-anchor="middle" x="90" y="62">3119020185</text></g></svg>                </span> 
+                </td>
+                
+                <!-- <td>Candidate’s Signature</td> -->
+                <td align="left" colspan="2" scope="row" class="text-center">
+
+                <span id="CandidateSignExist" style="display:none">true</span><img class="signpre" src="./index_files/D0002_1709032000.jpg" alt="Candidate Signature" title="Photograph" style="max-width: 170px;max-height: 60px;">                  <!-- <p>Candidate’s Signature</p> -->
+                </td>
+            </tr>
+           
+        </tbody></table>
+
+
+        <table width="100%" border="1" cellspacing="0" cellpadding="4" style="border-collapse: collapse; border-color: #000;" class="main-tbl">
+            <tbody><tr style="background:#ccc;">
+                <th colspan="5" scope="row" style="text-align: center;font-size: 14px;">
+                Test Details
+                </th>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Question Paper Medium</b></td>
+                <td colspan="2"> 
+                ENGLISH                 </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Date of Examination </b></td>
+                <td colspan="2">  05.05.2024 (Sunday) </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Reporting/Entry Time at Centre </b></td>
+                <td colspan="2"> 11:00 AM  </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Gate Closing Time of Centre </b></td>
+                <td colspan="2">  01:30 PM  </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Timing of Test </b></td>
+                <td colspan="2">  02.00 PM to 05.20 PM (Indian Standard Time) </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Test Centre No </b></td>
+                <td colspan="2"> 
+                311902            </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Test Centre Name </b></td>
+                <td colspan="2">
+                    APPASAHEB BIRNALE PUBLIC SSCHOOL SANGLI   </td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"><b>Test Centre Address (Venue of Test)</b></td>
+                <td colspan="2"> 
+                BEHIND RAILWAY STATION SHINDE MALA SANGLI ,
+                MAHARASHTRA ,
+                SANGLI 
+                (416416) 
+            </td>
+            </tr>
+            
+            
+           
+        </tbody></table>
+
+        <table width="100%" border="1" cellspacing="0" cellpadding="4" style="border-collapse: collapse; border-color: #000;">
+            <tbody><tr>
+                <td colspan="5" style="border: 0px;">
+                    <div style="text-align: center;">
+                    
+                        <img src="./index_files/SeniorDirectorSign.jpg" width="137" height="30">
+                        <br>
+                        <b style=" font-size: 15px; ">Senior Director (NTA)</b>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+
+
+        <div style="text-align: center;color: red;">
+            <h3 style="font-size: 11px;padding-top: 0px;padding-bottom: 0px;margin-bottom: 0px;"><strong>SELF DECLARATION (UNDERTAKING)</strong></h3>
+        </div>
+        <div id="self-section">
+            <p style="font-size: 10px;line-height: 15px;">&nbsp;&nbsp;&nbsp;&nbsp;I, -----------------------------------------------, resident of---------------------------------------------,do hereby, declare the following:</p>
+            <p style="font-size: 10px;line-height: 15px;">1. I have read the Instructions, Guidelines, Information Bulletin, Instructions, and Notices related to this examination available on the website <a href="https://exams.nta.ac.in/NEET/"> https://exams.nta.ac.in/NEET/</a> and <a href="https://neet.ntaonline.in/frontend/web/admitcard/www.nta.ac.in">www.nta.ac.in</a>
+            </p>
+            <p style="font-size: 10px;line-height: 15px;">2. I have read the detailed “IMPORTANT INSTRUCTIONS FOR CANDIDATES” as given on Page-3 and I undertake to abide by the same.
+</p>
+        </div>
+        <table width="100%" border="1" cellspacing="0" cellpadding="5" id="self-declaration-tbl" style="border-collapse: collapse; border-color: #000;">
+            <tbody><tr>
+                <td align="center" style=" width: 32%;" rowspan="2">
+                     
+                   
+                     <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p style="font-size:10px;line-height:12px;">Candidate’s Photo (Same as uploaded on the Application Form to be affixed before reaching the Centre)
+                    </p>
+                    
+                </td>
+                <td align="center" style=" width: 32%;" rowspan="2">
+                <p>&nbsp;</p>
+                    
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p style="font-size:10px;line-height:12px;">Candidate’s left-hand thumb Impression (To be affixed before reaching the Centre)</p>
+                    
+                </td>
+                <td align="center" style=" width: 32%;">
+                   
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p> 
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p style="font-size:10px;line-height:12px;">Candidate’s Signature (To be signed on the Day of Examination in the presence of the Invigilator only)
+                    </p>
+                </td>
+            </tr>
+        </tbody></table>
+        <h3 style="font-size: 10px;font-weight: 700;margin:0;">The above undertaking has to be filled up in advance before reaching the Centre, except for the candidate’s signature which has to be affixed in the presence of the Invigilator.
+        </h3>
+        
+
+          <p style="text-align:justify; line-height:14px;margin-top:1px;font-size:9px;"><b>*Disclaimer: <span style="color:#a71e2a;">The eligibility in the examination under the category "Persons with Disability" is purely provisional to appear in the examination and does not guarantee a seat to the candidate under the respective category. The candidature for admission to MBBS program under PwD category under various colleges will be governed as per relevant NMC guidelines which are given under Appendix-H1 of Guidelines regarding admission of students with "specified disabilities '' under the Right of Persons with Disabilities Act, 2016 with respect to admission in MBBS course during post-examination and counselling process issued on 01.08.2023. (Please refer Information Bulletin)</span></b></p>
+        
+        <table width="100%" class="header-admit-logo footer-section footerhindi header-logo-display">
+                <tbody><tr>
+                    <td style="border: 0;">
+                        Application Number :  240411383831<span style="padding:0px 10px">
+                        </span>
+
+                    </td>
+                    <td style="border: 0;">
+
+                        IP Address:106.195.5.238<span style="padding:0px 10px">
+
+                        </span>
+                    </td>
+                    <td style="border: 0;">
+                        Date and Time: <span style="padding:0px 10px">02-05-2024 11:35:48</span>
+                    </td>
+                    <td style="text-align: right;border: 0; padding:0px 10px;">
+                        [Page 1 of 3]
+                    </td>
+                </tr>
+            </tbody></table>  
+
+        <!-- header logo start -->
+        <div class="navbar navbar-expand-md navbar-light bg-light row ">
+        <table width="100%" border="0" class="custom-table header-logo-display">
+            <tbody><tr>
+                <td width="25%">
+                <a href="https://neet.ntaonline.in/frontend/web/admitcard/index#">
+                    <img class="dept-higher-edu-logo img-fluid" src="./index_files/dept-higher-edu.png" width="180" height="60">
+                </a>
+                </td>
+                <td width="50%">
+            <p class="text-center">
+              </p><h2 style="text-align: center;font-size: 13px;font-weight: 700;">National Eligibility cum Entrance Test </h2>
+             <h2 style="text-align: center;font-size: 13px;font-weight: 700;">NEET (UG) - 2024</h2>
+        <p></p>
+                </td>
+                <td width="25%">
+                  <img class="ugc-logo LeftImageWidth aisss" src="./index_files/nmc-with-nta.jpg" width="300" height="80">  
+            
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+        <!-- logo end -->
+        <br>
+        
+        <div style="height:540px;width:600px; text-align:center;border:1px solid #000;margin:0 auto;">
+       <br><br><br><br><br><br><br><br><br><br><br>
+                <strong style="margin-top:120px;">Please paste a Postcard Size (4’’ x 6’’) colour Photograph here before reaching the Centre. (The Candidate and the Invigilator are to sign across the photograph as indicated in the instructions below.)</strong>
+        </div>
+
+        <br>
+        <table width="100%" border="1" cellspacing="0" cellpadding="4" style="border-collapse: collapse; border-color: #000;" class="main-tbl">
+            <tbody><tr>
+                <td><strong>Date of Examination:</strong></td>
+                <td><strong>05.05.2024 (Sunday)</strong></td>
+                <td><strong>Timing:</strong></td>
+                <td><strong>02.00 PM to 05.20 PM (IST)</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Roll Number:</strong></td>
+                <td><strong> 3119020185</strong></td>
+                <td><strong>Application Number:</strong></td>
+                <td><strong> 240411383831</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Candidate Name:</strong></td>
+                <td><strong> SHRADDHA BHALCHANDRA MAGDUM</strong></td>
+                <td><strong>Father’s Name:</strong></td>
+                <td><strong> BHALCHANDRA</strong></td>
+            </tr>
+            <tr>
+                <td colspan="2" width="50%"><br><strong>Signature of Invigilator</strong></td>
+                <td colspan="2" width="50%"><br><strong>Candidate Signature (To be signed on the Day of Examination, in the presence of the Invigilator only)</strong></td>
+            </tr>
+        </tbody></table>
+        
+        <br>
+        <table width="100%" border="1" cellspacing="0" cellpadding="4" style="border-collapse: collapse; border-color: #000;" class="main-tbl">
+            <tbody><tr>
+                <td style="border-bottom:1px solid #fff;"><strong>INSTRUCTIONS FOR CANDIDATES:</strong></td>
+            </tr>
+            <tr>
+                <td>
+                a) The Candidate is to paste the latest colored postcard size (4" x 6") photograph of his/her own in the designated space. <br>
+                b) Invigilator shall ensure that the photograph and signature on this page match with the photograph and signature of the Candidate on Page 1 of Admit Card. <br>
+                c) The Candidate is to sign across the photograph on the left side. <br>
+                d) The Invigilator should sign across the photograph of the candidate on the right side.<br>
+                e) It is mandatory for the candidate to bring this page of the Admit Card with a pasted photograph. If he/she doesn't bring this, then he/she will not be allowed to sit in the examination, and this shall lead to his/her disqualification.
+                </td>
+            </tr>
+        </tbody></table>
+        <br>
+        
+        <table width="100%" class="header-admit-logo footer-section footerhindi header-logo-display">
+                <tbody><tr>
+                    <td style="border: 0;">
+                        Application Number :  240411383831<span style="padding:0px 10px">
+                        </span>
+
+                    </td>
+                    <td style="border: 0;">
+
+                        IP Address:106.195.5.238<span style="padding:0px 10px">
+
+                        </span>
+                    </td>
+                    <td style="border: 0;">
+                        Date and Time: <span style="padding:0px 10px">02-05-2024 11:35:48</span>
+                    </td>
+                    <td style="text-align: right;border: 0;padding:0px 10px;">
+                        [Page 2 of 3]
+                    </td>
+                </tr>
+            </tbody></table>  
+
+
+
+
+
+ <!-- header logo start --><br>
+ <div class="navbar navbar-expand-md navbar-light bg-light row ">
+        <table width="100%" border="0" class="custom-table header-logo-display">
+            <tbody><tr>
+                <td width="25%">
+                <a href="https://neet.ntaonline.in/frontend/web/admitcard/index#">
+                    <img class="dept-higher-edu-logo img-fluid" src="./index_files/dept-higher-edu.png" width="180" height="60">
+                </a>
+                </td>
+                <td width="50%">
+            <p class="text-center">
+              </p><h2 style="text-align: center;font-size: 13px;font-weight: 700;">National Eligibility cum Entrance Test </h2>
+             <h2 style="text-align: center;font-size: 13px;font-weight: 700;">NEET (UG) - 2024</h2>
+        <p></p>
+                </td>
+                <td width="25%">
+                  <img class="ugc-logo LeftImageWidth aisss" src="./index_files/nmc-with-nta.jpg" width="300" height="80">  
+            
+                </td>
+            </tr>
+        </tbody></table>
+        </div>
+        <!-- logo end -->
+             
+        <p style="text-align:center" class="removeMargin"><strong style="color:#FF0033;">IMPORTANT INSTRUCTIONS FOR CANDIDATES </strong></p>
+        <ol start="1" id="imp-point">
+                    <li>The candidate must reach the Centre at the time indicated against Reporting/Entry time at the Centre in the Admit Card. </li>
+                    <li>No candidate shall be permitted to enter the Centre after the Gate Closing- Time. </li>
+                    <li>No candidate shall be permitted to leave the Examination Room/Hall before the end of the examination. </li>
+                    <li>On completion of the examination, please wait for instructions from Invigilator and do not get up from your seat until advised. The candidates will be permitted to move out one at a time only. </li>
+                    <li>All candidates are required to download and carefully read the Instructions given with the Admit Card and strictly adhere to them. </li>
+                    <li>This Admit Card consists of three pages- Page 1 contains the <b>Centre details and Self Declaration (Undertaking) form </b>Page 2 has a <b>“Postcard Size Photograph”</b> and “Page 3 has <b>“Important instructions for Candidates”</b>. The candidate must download all three pages. </li>
+                    <li>The Admit Card is provisional, subject to satisfying the eligibility conditions as given in the Information Bulletin. </li>
+                    <li>Candidates are advised to verify the location of the examination venue, a day in advance so that they do not face any problem on the day of examination.If religion/customs require you to wear specific attire, please visit the Centre early for thorough checking. </li>
+                    <!-- <li>If religion/customs require you to wear specific attire, please visit the Centre early for thorough checking. </li> -->
+                    <li>No Candidate would be allowed to enter the Examination Centre, without Admit Card, Valid ID Proof, and proper frisking. Frisking will be carried out through Handheld Metal Detector (HHMD). </li>
+                    <li>Candidates will be permitted to carry only the following items with them into the examination venue:
+                    <ol type="a" start="a">
+                    <li>Personal transparent water bottle.</li>
+                    <li>Additional photograph same as uploaded on Application Form, to be pasted on Attendance Sheet.</li>
+                    <li>Admit Card along with Self Declaration (Undertaking) having Postcard size photograph affixed on the designated space (page 2) downloaded from the NTA website (a clear printout on A4 size paper) duly filled in.</li>
+                    <li>Before reaching the Centre, the candidates must enter the required details in the Undertaking in legible handwriting.</li>
+                    <li>PwD Certificate and Scribe-related documents, if applicable.</li>
+                    </ol>
+                    </li>
+                    <li>Candidate should put their signature and paste the Photograph at the appropriate place. They should ensure that their Left-Hand Thumb Impression is clear and not smudged. </li>
+                    <li>Candidate must carry valid Identity proof, preferably, <b>Aadhaar Card (with photograph)/ E-Aadhaar/Ration Card/ Aadhaar Enrolment No. with Photo </b>to the center. However, other valid Identity proof issued by the government – PAN card/ Driving License/ Voter ID/ 12th Class Board Admit or Registration card/ Passport/ Original School Identity card with Photo will also be considered ONLY in case of non-availability. All other ID/Photocopies of IDs even if attested/scanned photo of IDs in mobile phone will NOT be considered valid ID Proof. </li>
+                    <li>The PwD candidates must bring a PwD Certificate issued by the Competent Authority if claiming relaxation under the PwD category. The Scribe will be provided by National Testing Agency only if requested in the online Application Form of NEET (UG) – 2024. The facility of a Scribe will be provided, in case he/she has a physical limitation, and a scribe is essential to write the examination on his/her behalf, being so certified in the authorised format as per <b>RPwD Act,2016</b> given by a CMO/Civil Surgeon/ Medical Superintendent of a Government Health Care Institution. Compensatory time of one hour and five minutes will be provided for the examination of three hours &amp; 20 minutes (03:20 hrs) duration, whether such candidate (having a physical limitation to write) uses the facility of Scribe or not. </li>
+                    <li>Candidates are <b> NOT allowed</b>  to carry any personal belongings including electronic devices, mobile phones, and other banned/ prohibited items listed in the Information Bulletin to the Examination Centre. Examination Officials will not be responsible for the safe keep of personal belongings and there will be no facility at the center.</li>
+                    <li>Blank paper sheets for rough work will NOT be provided in the examination Hall/Room. <b> Rough work is to be done in the space provided for this purpose in the Test Booklet only.</b>  Failure to do so may result in the non-evaluation of your answer.</li>
+                    <li>No Candidate should adopt any unfair means or indulge in any unfair examination practices as the examination Centres are under surveillance of CCTV and equipped with Jammers.</li>
+                    <li>On completion of the test, candidates must hand over the OMR Sheet (<b> both </b> Original and Office Copy) and take away only the Test Booklet with them. It will be the responsibility of the candidate also to ensure that the OMR sheet submitted by him/her carries his/her signature as well as the Signature of the Invigilator at the pre-determined spaces.</li>
+                    <li><b> No Bio-breaks</b>  will be allowed <b> during first one hour</b>  after beginning of the exam and <b> last half an hour </b> of the exam.</li>
+                    <li>Apart From the biometric attendance and frisking at entry, candidates will be frisked and biometric attendance will be taken again on entry from bio-break/toilets break.</li>
+                    <li>Candidates are advised NOT to indulge in use of Un-Fair Means, impersonation etc. Candidates found using Un-Fair Means are liable for strict action including debarment from appearing in all the examinations conducted by NTA.</li>
+                    <li><b>Important Advisories to candidate:</b>
+                    <ol type="a" start="a">
+                    <li>NTA uses AI based real time analytical tools &amp; technologies to map likely/potential use of unfair means /cheating behavior by candidates at all centres, both during and post exams.</li>
+                    <li>CCTV recordings are analyzed using AI technologies to confirm malpractice with evidence.</li>
+                    <li>NTA catches the likely cheaters through Artificial Intelligence-based tool.</li>
+                    <li>Suspicious candidates are identified through AI-based tools, even after the examination.</li>
+                    <li>Examination centers are continuously monitored through artificial intelligence-enabled systems to ensure the integrity of the examination process.</li>
+                    </ol>
+                    </li>
+                    <li>Candidates are advised to check updates on the NTA websites regularly i.e. <a href="https://neet.ntaonline.in/frontend/web/admitcard/www.nta.ac.in/"> www.nta.ac.in</a>, <a href="https://exams.nta.ac.in/NEET/">https://exams.nta.ac.in/NEET/</a>.They should also check their mailbox on the registered E-mail address and SMS in their registered Mobile No. for the latest updates and information.</li>
+                    <li>For any clarification/assistance, you can write to NTA at <b><a href="https://neet.ntaonline.in/frontend/web/admitcard/neet@nta.ac.in">neet@nta.ac.in</a></b> or call at Helpline number <b>011 -40759000 </b></li>
+                   
+            </ol>
+
+                <table width="100%" class="header-admit-logo footer-section footerhindi header-logo-display">
+                <tbody><tr>
+                    <td style="border: 0;">
+                        Application Number :  240411383831<span style="padding:0px 10px">
+                        </span>
+
+                    </td>
+                    <td style="border: 0;">
+
+                        IP Address:106.195.5.238<span style="padding:0px 10px">
+
+                        </span>
+                    </td>
+                    <td style="border: 0;">
+                        Date and Time: <span style="padding:0px 10px">02-05-2024 11:35:48</span>
+                    </td>
+                    <td style="text-align: right;border: 0;padding:0px 10px;">
+                       [ Page 3 of 3]
+                    </td>
+                </tr>
+            </tbody></table>  
+
+               
+               
+
+             
+
+
+        
+        <script src="./index_files/jquery.min(1).js.download"></script>
+        <script>
+        $(document).ready(function() {
+            $("#print-btn").click(function() {
+
+                 var barcodeValue = document.getElementById("barcode").innerText;
+                 if (barcodeValue.trim() === "") {
+                     alert("Roll Number Barcode Section is blank!, Please regenerate your Admit Card");
+                     window.location.href = "https://neet.ntaonline.in/frontend/web/admitcard/index";
+                     return;
+                 }
+
+                 var CandidatePhotoExist = document.getElementById("CandidatePhotoExist").innerText;
+                 if (CandidatePhotoExist == "false") {
+                     alert("Candidate Photo is blank!, Please regenerate your Admit Card");
+                     window.location.href = "https://neet.ntaonline.in/frontend/web/admitcard/index";
+                     return;
+                 }
+
+                 var CandidateSignExist = document.getElementById("CandidateSignExist").innerText;
+                 if (CandidateSignExist == "false") {
+                   alert("Candidate Sign is blank!, Please regenerate your Admit Card");
+                   window.location.href = "https://neet.ntaonline.in/frontend/web/admitcard/index";
+                   return;
+                 }
+
+                $("#print-btn-show").click();
+
+            });
+            //cntrl + p disable
+            $(document).keydown(function(event) {
+                if (event.ctrlKey == true && (event.which == '80')) {
+
+                     var barcodeValue = document.getElementById("barcode").innerText;
+                     if (barcodeValue.trim() === "") {
+                         alert("Roll Number Barcode Section is blank!, Please regenerate your Admit Card");
+                             event.preventDefault();
+                         window.location.href = "https://neet.ntaonline.in/frontend/web/admitcard/index";
+                         return;
+                     }
+
+                     var CandidatePhotoExist = document.getElementById("CandidatePhotoExist").innerText;
+                 if (CandidatePhotoExist == "false") {
+                     alert("Candidate Photo is blank!, Please regenerate your Admit Card");
+                     window.location.href = "https://neet.ntaonline.in/frontend/web/admitcard/index";
+                     return;
+                 }
+
+                 var CandidateSignExist = document.getElementById("CandidateSignExist").innerText;
+                 if (CandidateSignExist == "false") {
+                   alert("Candidate Sign is blank!, Please regenerate your Admit Card");
+                   window.location.href = "https://neet.ntaonline.in/frontend/web/admitcard/index";
+                   return;
+                 }
+                
+                }
+              
+            });
+        });
+        </script>
+
+
+        </div>
+        <!-- content-body -->
+        </div>
+    
+    <div class="footer row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="https://neet.ntaonline.in/frontend/web/admitcard/index#"><img class="nta-logo img-fluid" src="./index_files/nta-logo-new.webp" alt=""></a>
+        </div>
+    </div>
+
+  <!-- Modal Aadhaar Reverify Code-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Please Fill Aadhaar Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contact-form" action="https://neet.ntaonline.in/frontend/web/admitcard/index" method="post">
+<input type="hidden" name="_csrf-frontend" value="K4ZEdSRFFIZUDj4jQgmEDXWs2-3fyruzqgh-cKKf61pCwH0PcHR11RFbaXoQasx1JMOQvaqVw8XJRjIfwNCkIg==">                    <span id="aadhaarlogin">
+                        <div class="row mb-3 AadhaarNumberhide">
+                            <label class="col-sm-4 col-form-label text-end">Aadhaar Number<span class="astric-sign">*</span></label>
+                            <div class="col-sm-5">
+                                <input type="text" name="AadhaarNumber" placeholder="Enter Aadhaar Number" class="form-control form-control-sm" id="AadhaarNumber" minlength="12" maxlength="12" onkeypress="return blockSpecialChar(event,&#39;numeric&#39;)" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="row mb-3" id="divMessage" style="display:none;">
+                            <label class="col-sm-4 col-form-label text-end empity-cell">&nbsp;</label>
+                            <div class="col-sm-5">
+                                <span id="spnResult" style="color: green; font-weight: bold; font-size: 17px;"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3 AadhaarNumberhide">
+                            <label class="col-sm-4 col-form-label text-end empity-cell">&nbsp;</label>
+                            <div class="col-sm-5">
+                                <span id="btnGenerateOTP" class="btn btn-sm btn-warning" onclick="onGenerateOTPRe()">Generate OTP</span>
+                            </div>
+                        </div>
+                        <div class="row mb-3" style="display:none;" id="otpdiv">
+                            <label class="col-sm-4 col-form-label text-end empity-cell">OTP<span class="astric-sign">*</span></label>
+                            <div class="col-sm-5">
+                                <input type="text" name="Otp" placeholder="Enter OTP" class="form-control form-control-sm" id="Otp" minlength="6" maxlength="6" onkeypress="return blockSpecialChar(event,&#39;numeric&#39;)" autocomplete="off">
+
+                                <label class="control-label" style="text-align:left;margin-left:5px;font-size:14px;font-weight:bold">Please validate the OTP within 10 minutes of receiving it</label>
+                            </div>
+                            <label class="col-sm-4 col-form-label text-end empity-cell">&nbsp;</label>
+                            <div class="col-sm-5"><br>
+                                <span id="btnValidateOTP" class="btn btn-sm btn-warning" disabled="" onclick="onValidateOtpRe()">Validate OTP</span>
+                            </div>
+                        </div>
+                    </span>
+                    </form>                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <input type="hidden" name="ApplicationNo" id="ApplicationNo" value="">
+   <input type="hidden" name="ReferenceID" id="ReferenceID" value="">
+    <script>
+        $(document).ready(function() {
+             if ($("#ReferenceID").val() == '0') {
+                $('#exampleModal').modal('show');   
+                setInterval(function() {$('#exampleModal').modal('show');}, 10000);            
+            }
+            
+        });
+        $(".close").on('click', function() {
+            $("#exampleModal").modal('hide');
+        });
+        var otpTxnId = null;
+
+        function onGenerateOTPRe() {
+
+            var aadhaarNumber = $('#AadhaarNumber').val();
+            if (aadhaarNumber.trim().length !== 12) {
+                alert("Please enter valid aadhaar number")
+                $('#AadhaarNumber').focus();
+                return;
+            }
+            $.ajax({
+                type: 'POST',
+                url: "/frontend/web/aadhaarreverify/generateotp",
+                data: {
+                    AADHAARNUMBER: aadhaarNumber
+                },
+                "beforeSend": function(response) {
+                    SimpleLoading.start();
+                },
+                success: function(data) {
+                    var resp = JSON.parse(data);
+                    SimpleLoading.stop();
+                    if (resp.error) {
+                        $('#spnResult').html(resp.errorMessage);
+                        $('#spnResult').css("color", "red");
+                        $('#divMessage').show();
+                        $("#otpdiv").hide();
+                        $(".AadhaarNumberhide").show();
+                        return false;
+                    }
+
+                    otpTxnId = resp.otpTxnId;
+                    // console.log(otpTxnId);
+                    var message = "OTP send successfully";
+                    var mobileAdded = false;
+                    if (resp.maskedMobile !== undefined && resp.maskedMobile !== "" && resp.maskedMobile !== "NA" && resp.maskedMobile !== null) {
+                        message = message + " to " + resp.maskedMobile;
+                        mobileAdded = true;
+                    }
+
+                    if (resp.maskedEmail !== undefined && resp.maskedEmail !== "" && resp.maskedEmail !== null) {
+                        if (mobileAdded) {
+                            message = message + " and";
+                        } else {
+                            message = message + " to";
+                        }
+
+                        message = message + " " + resp.maskedEmail;
+                    }
+
+
+                    $('#spnResult').html(message);
+                    $('#spnResult').css("color", "green");
+                    $('#divMessage').show();
+                    $("#otpdiv").show();
+                    $(".AadhaarNumberhide").hide();
+                    $('#btnGenerateOTP').attr("disabled", true);
+                    $('#btnValidateOTP').removeAttr("disabled");
+                    $('#btnCancel').removeAttr("disabled");
+                    $('#Otp').removeAttr("disabled");
+                },
+                error: function(xhr, textStatus, error) {
+                    $('#spnResult').html(error.message);
+                    $('#spnResult').css("color", "red");
+                    $('#divMessage').show();
+                    return false;
+                }
+            });
+        }
+
+        function onValidateOtpRe() {
+            var aadhaarNumber = $('#AadhaarNumber').val();
+            var otpValue = $('#Otp').val();
+            if (otpValue == '' || otpValue.trim().length !== 6) {
+                $('#Otp').focus();
+                return false;
+            }
+            $.ajax({
+                type: 'POST',
+                url: "/frontend/web/aadhaarreverify/validateotp",
+                data: {
+                    AADHAARNUMBER: aadhaarNumber,
+                    OTPVALUE: otpValue,
+                    OTPTXNID: otpTxnId,
+                },
+                "beforeSend": function(response) {
+                    SimpleLoading.start();
+                },
+                success: function(data) {
+                    var resp = JSON.parse(data);
+                    console.log(resp);
+                    if (resp.error) {
+                        $('#spnResult').html(resp.errorMessage);
+                        $('#spnResult').css("color", "red");
+                        $('#divMessage').show();
+                        SimpleLoading.stop();
+                        return false;
+                    }
+                },
+                error: function(xhr, textStatus, error) {
+                    $('#spnResult').html(error.message);
+                    $('#spnResult').css("color", "red");
+                    $('#divMessage').show();
+                    SimpleLoading.stop();
+                    return false;
+                }
+            });
+        }
+    </script>
+
+    <script>
+       $(document).ready(function() {
+           const channel = new BroadcastChannel('tab');
+           channel.postMessage('another-tab');
+           channel.addEventListener('message', (msg) => {
+               if (msg.data === 'another-tab') {
+                   // message received from 2nd tab
+                   alert('Cannot open multiple instances.You are logged out!');
+                   $.ajax({
+                       type: "post",
+                       url: '',
+                       data: {},
+                       cache: false,
+                       success: function(data) {
+
+                       }
+                   });
+                   window.location.href = "";
+               }
+           });
+       });
+
+        		document.onkeydown = function(e) {
+        		  if(event.keyCode == 123) {
+        			 return false;
+        		  }
+        		  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        			 return false;
+        		  }
+        		  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        			 return false;
+        		  }
+        		  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        			 return false;
+        		  }
+        		  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        			 return false;
+        		  }
+        		}
+
+        		document.addEventListener('contextmenu', function(e){
+        		e.preventDefault();
+        		});
+    </script>
+    <script src="./index_files/jquery.js.download"></script>
+<script src="./index_files/yii.js.download"></script>
+<script src="./index_files/JsBarcode.all.min.js.download"></script>
+<script src="./index_files/simple-loading.js.download"></script>
+<script src="./index_files/demo.js.download"></script>
+<script src="./index_files/jquery.smartWizard.min.js.download"></script>
+<script src="./index_files/jquery.image-popup.js.download"></script>
+<script src="./index_files/bootstrap.bundle.min.js.download"></script>
+<script src="./index_files/feather.min.js.download"></script>
+<script src="./index_files/perfect-scrollbar.min.js.download"></script>
+<script src="./index_files/script.js.download"></script>
+<script src="./index_files/jquery.dataTables.min.js.download"></script>
+<script src="./index_files/dataTables.bootstrap4.min.js.download"></script>
+<script src="./index_files/dataTables.responsive.min.js.download"></script>
+<script src="./index_files/responsive.bootstrap4.min.js.download"></script>
+<script src="./index_files/dataTables.buttons.min.js.download"></script>
+<script src="./index_files/buttons.bootstrap4.min.js.download"></script>
+<script src="./index_files/comman.js.download"></script>
+<script src="./index_files/bootstrap.bundle.min(1).js.download"></script>
+<script src="./index_files/jquery.multiselect.js.download"></script>
+<script src="./index_files/sweetalert2.all.min.js.download"></script>
+<script src="./index_files/yii.activeForm.js.download"></script>
+<script>jQuery(function ($) {
+JsBarcode("#w0", "3119020185", {"width":2,"height":40,"displayValue":true,"format":"CODE128"});
+jQuery('#contact-form').yiiActiveForm([], {"errorSummary":".alert.alert-danger","errorCssClass":"is-invalid","successCssClass":"is-valid","validationStateOn":"input"});
+
+        $(document).ready(function () {
+            $("#refresh_captcha").click(function (event) {
+                event.preventDefault();
+                $(this).parent().children('img').click();
+                $("#candidate-verifycode").val("");
+                $("#candidate-verifycode").removeClass("is-valid")
+            })
+        });
+
+        $(document).ready(function (){
+            $(".form-control").addClass("form-control-sm");
+            $("#refresh_captcha").click();
+        });
+
+        $(document).ready(function () {
+            $(".userActivityBtn").click(function (event) {
+                console.log("test-main.php");
+                //event.preventDefault()
+              var currentURL   = $(location).attr("href");
+                $.ajax({
+                  url: "/frontend/web/useracitivity/useract" ,
+                  type: "post",
+                  data: {
+                        moduleName: $(this).attr("data-modulename"),  
+                        activityName: $(this).attr("data-activityname"), 
+                        url: currentURL,  
+                        _csrf : "<?=Yii::$app->request->getCsrfToken()?>"
+                      },
+                  success: function (data) {
+                     console.log(data);
+                  }
+              });
+            })
+          });
+
+      
+});</script>
+    
+
+
+<div id="edwinhaq_simple_loading" class="simple-loading simple-loading-default" style="display: none;"></div></body></html>
